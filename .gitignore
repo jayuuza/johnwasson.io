@@ -1,0 +1,3 @@
+*.pot
+*.py[co]
+__pycache__
