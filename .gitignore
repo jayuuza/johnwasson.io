@@ -1,0 +1,4 @@
+*.pot
+*.py[co]
+__pycache__
+*.pyc
