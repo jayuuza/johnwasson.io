@@ -1,0 +1,148 @@
+// Variable
+$color: #ff3366 !default;
+
+// Mixins
+@import "../scss/_variables";
+@import "../scss/_mixins";
+
+//
+// Brand selectors
+//
+a,
+a:focus,
+a:hover,
+mark,
+.highlight,
+.navbar .nav-menu > li:hover > a,
+.navbar .nav-menu a:hover,
+.navbar .nav-menu a.active,
+.offcanvas-show .navbar-toggle,
+.transparent-nav .navbar .nav-menu ul a:hover,
+.transparent-nav .navbar .nav-menu ul a.active,
+.transparent-nav.body-scrolled .navbar .nav-menu a:hover,
+.transparent-nav.body-scrolled .navbar .nav-menu a.active,
+.transparent-nav.body-scrolled .navbar .navbar-toggle:hover,
+.transparent-nav.body-scrolled .navbar .navbar-toggle.active,
+.transparent-nav.body-scrolled .navbar .nav-menu > li:hover > a,
+.transparent-nav .navbar .nav-menu a:hover,
+.transparent-nav .navbar .nav-menu a.active,
+.btn-outline.btn {
+  color: $color;
+}
+
+.section-header h2::after,
+.navbar .nav-menu a.menu-highlighted:hover,
+.btn,
+.lSSlideOuter .lSPager.lSpg > li.active a,
+.lSSlideOuter .lSPager.lSpg > li:hover a {
+  background-color: $color;
+}
+
+.btn,
+.lSSlideOuter .lSPager.lSpg > li a {
+  border-color: $color;
+}
+
+.navbar .nav-menu ul {
+  border-top-color: $color;
+}
+
+//
+// Lightening
+//
+.features .icon {
+  color: lighten($color, 5%);
+}
+
+.features.icon-round .icon {
+  background-color: lighten($color, 5%);
+}
+
+.features.icon-round li:hover .icon {
+  background-color: lighten($color, 2%);
+}
+
+.navbar .nav-menu a.menu-highlighted {
+  background-color: lighten($color, 3%);
+}
+
+.btn:hover,
+.btn:focus,
+.btn:active,
+.btn:active:focus {
+  background-color: lighten($color, 2%);
+}
+
+
+::selection {
+  background: lighten($color, 15%);
+}
+::-moz-selection {
+  background: lighten($color, 15%);
+}
+
+//
+// Some fixes
+//
+.btn-outline:hover,
+.btn-outline:focus,
+.btn-outline:active,
+.transparent-nav .navbar .nav-menu a.active {
+  color: #fff;
+}
+
+.btn.active:hover,
+.btn.active:focus,
+.btn.active:active,
+.btn.active:active:focus {
+  background-color: #32333a;
+}
+
+.btn-outline {
+  background-color: transparent;
+}
+
+
+// Button variations
+.btn-black   { @include btn-variation($color-dark); }
+
+.btn-white {
+  background-color: #fff;
+  color: $color-gray-light;
+  border-color: #fff;
+  box-shadow: 0px 1px 2px 0px rgba(50, 50, 50, 0.15);
+
+  &:hover,
+  &:focus,
+  &:active,
+  &:active:focus {
+    color: $color-gray;
+    background-color: #fff;
+    box-shadow: 0px 1px 2px 0px rgba(50, 50, 50, 0.15);
+  }
+}
+
+.btn-outline {
+
+  background-color: transparent;
+  border-width: 1px;
+
+  &.btn-black   { color: $color-dark; }
+  &.btn-white   {
+    color: #fff;
+    border-color: #fff;
+    box-shadow: none;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: #fff;
+  }
+
+  &.btn-white:hover,
+  &.btn-white:focus,
+  &.btn-white:active {
+    color: $color-gray;
+  }
+}

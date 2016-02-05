@@ -1,0 +1,26 @@
+/*
+ * TheSplash v1.0.0 (http://shamsoft.net/thesplash)
+ * Copyright 2016 ShaMSofT
+ * Licensed under the Themeforest Standard Licenses
+ */
+
+// Core variables and mixins
+@import "variables";
+@import "mixins";
+
+// Core CSS
+@import "typography";
+@import "sections";
+@import "navbar";
+@import "header";
+@import "footer";
+@import "buttons";
+
+// Components
+@import "demo";
+@import "counter";
+@import "features";
+@import "testimonials";
+
+// Others
+@import "utilities";

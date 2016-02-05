@@ -1,0 +1,114 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+
+    <title>{{ page_title }}</title>
+
+    <!-- Styles -->
+    <link href="john_wasson/static/css/app.min.css" rel="stylesheet">
+    <link href="john_wasson/static/css/thesplash.css" rel="stylesheet">
+    <link href="john_wasson/static/css/skin-red.css" rel="stylesheet">
+    {% static "css/app.min.css" %}
+    {% static "css/thesplash.css" %}
+    {% static "css/skin-red.css" %}
+
+
+    <!-- Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Raleway:300,400,500,600,800%7COpen+Sans:300,400,500,600,700,800%7CMontserrat:400,700' rel='stylesheet' type='text/css'>
+
+    <!-- Favicons -->
+    <link href="/apple-touch-icon.png" rel="stylesheet">
+    <link href="assets/img/favicon.ico" rel="stylesheet">
+
+  </head>
+  <body class="sticky-nav transparent-nav">
+
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="container">
+        <div class="logo">
+          <a class="logo-default" href="index.html"><img src="assets/img/logo.png" alt="logo"></a>
+          <a class="logo-transparent" href="index.html"><img src="assets/img/logo-alt.png" alt="logo"></a>
+        </div>
+
+        <a class="navbar-toggle" href="#" data-toggle="offcanvas"><i class="fa fa-bars"></i></a>
+
+        <ul class="nav-menu">
+          <li><a class="active" href="http://shamsoft.net/thesplash">Overview</a></li>
+          <li><a href="http://shamsoft.net/thesplash/doc">Documentation</a></li>
+          <li><a href="http://themeforest.net/item/thesplash-template-landing-page/14375892/comments">Support</a></li>
+
+        </ul>
+      </div>
+    </nav>
+    <!-- END Navigation -->
+
+    <!-- Site header -->
+    <header class="site-header color-alt overlay-black size-full text-center" style="background-image: url(assets/img/bg-page.jpg)">
+      <div class="container">
+        <h1>An <strong>amazing</strong> landing page</h1>
+        <h4>It helps you rapidly develop a splash/intro page for your next template.</h4>
+        <br><br><br>
+        <h6>There's a plenty of demos</h6>
+        <a class="btn btn-lg btn-white btn-outline btn-round" href="#demos"><span style="padding: 0 30px;">See the demos</span></a>
+      </div>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="{% url 'home:index' %}">Home</a></li>
+            <li><a href="{% url 'blog:index' %}">Blog</a></li>
+        </ul>
+    </nav>
+
+    {% block body %}
+    
+
+
+    {% endblock %}
+
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-md-8 col-sm-6 col-xs-12">
+            <ul class="footer-links">
+              <li><a href="#">About us</a></li>
+              <li><a href="#">Privacy policy</a></li>
+              <li><a href="#">Support</a></li>
+              <li><a href="#">Contact us</a></li>
+            </ul>
+          </div>
+
+          <div class="col-md-4 col-sm-6 col-xs-12">
+            <ul class="footer-socials">
+              <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+              <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+              <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
+              <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
+              <li><a class="instagram" href="#"><i class="fa fa-instagram"></i></a></li>
+            </ul>
+          </div>
+
+        </div>
+
+        <div class="row">
+          <div class="col-md-8 col-sm-6 col-xs-12">
+            <p class="copyright-text">Copyrights &copy; 2016 All Rights Reserved by <a href="http://themeforest.net/user/shamsoft">ShaMSofT</a>.</p>
+          </div>
+
+          <div class="col-md-4 col-sm-6 col-xs-12">
+            <p class="back-to-top"><a id="scroll-up" href="#">back to top</a></p>
+          </div>
+        </div>
+        
+      </div>
+    </footer>
+</body>
+</html>

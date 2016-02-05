@@ -1,0 +1,153 @@
+
+.testimonials {
+
+  margin: 30px 0;
+
+  li {
+    padding: 0 100px;
+  }
+  
+  img {
+    border-radius: 100%;
+    max-width: 128px;
+    height: auto;
+    float: left;
+    margin-right: 24px;
+  }
+
+  p {
+    margin-left: 152px;
+    margin-top: 0;
+    font-family: $font-family-title;
+    font-size: 18px;
+    line-height: 32px;
+    font-weight: 300;
+  }
+
+  h6 {
+    margin-left: 152px;
+    font-size: 13px;
+    font-weight: 600;
+
+    &::before {
+      content: '\2014 \00A0';
+    }
+  }
+}
+
+.lSSlideOuter .lSPager.lSpg > li {
+
+  a {
+    background-color: transparent;
+    border: 1px solid $color-brand;
+    transition: background-color .3 ease-in;
+  }
+
+  &.active a,
+  &:hover a {
+    background-color: $color-brand;
+  }
+
+}
+
+
+.reviews {
+  list-style: none;
+  padding-left: 0;
+  margin: 30px auto;
+  width: 80%;
+
+  li {
+    display: block;
+    margin-bottom: 30px;
+    background-color: $bg-gray-light;
+    padding: 10px 20px;
+  }
+
+  h5 {
+    display: inline-block;
+  }
+
+  p {
+    margin-top: 0;
+    font-family: $font-family-title;
+    font-size: 18px;
+    line-height: 32px;
+    font-weight: 400;
+    text-align: justify;
+  }
+
+  h6 {
+    font-size: 13px;
+    font-weight: 600;
+    text-align: right;
+    text-transform: uppercase;
+
+    &::before {
+      content: '\2014 \00A0';
+    }
+  }
+
+  .rate {
+    color: #feb910;
+    display: inline-block;
+    float: right;
+    margin-top: 24px;
+    line-height: 30px;
+    font-size: 18px;
+
+    .empty {
+      color: #ddd;
+    }
+  }
+
+}
+
+.review-slider {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+@include media-down(tablet) {
+
+  .testimonials li {
+    padding: 0;
+  }
+
+  .review-slider,
+  .reviews {
+    width: 100%;
+  }
+
+}
+
+@include media-down(phone) {
+
+  .testimonials li {
+    img {
+      max-width: 96px;
+      float: none;
+      display: block;
+      margin: 0 auto;
+      margin-bottom: 24px;
+    }
+
+    p,
+    h6 {
+      margin-left: 0;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 24px;
+      text-align: justify;
+    }
+  }
+
+  .reviews .rate {
+    font-size: 14px;
+  }
+
+}

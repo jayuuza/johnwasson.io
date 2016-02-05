@@ -1,0 +1,365 @@
+
+
+// General styling
+.demos {
+  list-style: none;
+  padding-left: 0;
+  margin: 30px 0;
+
+  &::after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+
+  li {
+    display: inline-block;
+    float: left;
+    width: 30%;
+    margin-bottom: 50px;
+    margin-right: 4%;
+
+    &:nth-child(3n+3) {
+      margin-right: 0;
+    }
+  }
+
+  img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+  }
+
+  &.bg-colored li {
+    background-color: $bg-gray-light;
+    padding: 16px;
+  }
+
+  .img-scroll {
+    background-position: center 0px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    display: block;
+    width: 100%;
+    height: 350px;
+    margin: auto;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+    transition: 2s linear;
+
+    &:hover {
+      background-position: center 100%;
+    }
+  }
+
+  .item {
+    background-color: $bg-gray;
+    border: 5px solid $bg-gray;
+    border-radius: 3px;
+
+    &.border-10 { border-width: 10px; }
+    &.border-20 { border-width: 20px; }
+    &.border-30 { border-width: 30px; }
+
+    img {
+      width: 100%;
+    }
+
+    //
+    // Preview icon
+    //
+    .preview-icon {
+      position: relative;
+      display: block;
+      overflow: hidden;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,.5);
+        transition: .2s ease-in;
+        opacity: 0;
+      }
+
+      &::after {
+        content: "\f06e";
+        font-family: "FontAwesome";
+        font-size: 60px;
+        color: rgba(255,255,255,.9);
+        text-align: center;
+        transition: .2s ease-in-out;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 50%;
+        margin-top: -40px;
+        transform: scale(0);
+      }
+
+      &:hover::before {
+        opacity: 1;
+      }
+
+      &:hover::after {
+        transform: scale(1);
+      }
+    }
+
+    //
+    // Preview buttons
+    //
+    .preview-btn {
+      position: relative;
+      display: block;
+      overflow: hidden;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,.5);
+        transition: .3s ease-in;
+        opacity: 0;
+      }
+
+      &:hover::before {
+        opacity: 1;
+      }
+
+      .buttons {
+        text-align: center;
+        transition: .3s ease-in-out;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        opacity: 0;
+      }
+
+      &:hover .buttons {
+        opacity: 1;
+      }
+
+      .btn + .btn {
+        margin-left: 8px;
+      }
+    }
+
+  }
+
+
+
+  //
+  // Side image
+  //
+  .media {
+    width: 45%;
+    display: inline-block;
+    margin-right: 5%;
+    transform: translateY(-50%);
+    top: 50%;
+    position: relative;
+
+    img {
+      width: 100%;
+    }
+
+    .img-scroll {
+      height: 240px;
+    }
+  }
+
+  .desc {
+    display: inline-block;
+    width: 50%;
+    float: right;
+    position: relative;
+    transform: translateY(-50%);
+    top: 50%;
+  }
+
+
+  //
+  // Columns
+  //
+  &.cols-4 li {
+    width: 21.5%;
+    margin-right: 4%;
+    margin-bottom: 64px;
+
+    &:nth-child(4n+4) {
+      margin-right: 0;
+    }
+  }
+
+  &.cols-2 li {
+    width: 47.5%;
+    margin-right: 0;
+
+    &:nth-child(odd) {
+      margin-right: 4%;
+    }
+  }
+
+  &.cols-1 li {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  // Filterable demos
+  &.filterable-demo {
+
+    li {
+      width: 33.3333%;
+      margin-right: 0 !important;
+      padding: 16px;
+    }
+
+    &.cols-4 li {
+      width: 25%;
+    }
+
+    &.cols-2 li {
+      width: 50%;
+    }
+
+    &.cols-1 li {
+      width: 100%;
+    }
+  }
+
+
+
+}
+
+
+
+
+// Shuffle.js filter buttons
+.filter-demo {
+  text-align: center;
+}
+
+
+// Classes to use with <img>
+.img-thumbnail {
+  border-color: $color-border;
+  border-radius: 3px;
+}
+
+.img-bordered {
+  border: 1px solid $color-border;
+}
+
+.img-shadowed {
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+}
+
+.img-shadow {
+  transition: box-shadow .2s ease-in;
+  box-shadow: none;
+
+  &:hover {
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+  }
+}
+
+.img-fade {
+  transition: opacity .3s ease-in-out;
+  opacity: 1;
+
+  &:hover {
+    opacity: .7;
+  }
+}
+
+.img-zoom {
+  transition: transform .3s ease-in-out;
+  transform: scale(1);
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+
+// Media queries
+@include media-down(tablet) {
+
+  .demos {
+
+    .media {
+      width: 100%;
+      display: block;
+      margin-right: 0;
+      transform: translateY(0);
+      top: 0;
+      position: static;
+
+      img {
+        width: 100%;
+      }
+
+      .img-scroll {
+        height: 240px;
+      }
+    }
+
+    .desc {
+      display: block;
+      width: 100%;
+      float: none;
+      position: static;
+      transform: translateY(0);
+      top: 0;
+      text-align: center;
+    }
+
+
+    //
+    // Columns
+    //
+    &.cols-4 li {
+      width: 30%;
+      margin-right: 4%;
+
+      &:nth-child(3n+3) {
+        margin-right: 0;
+      }
+    }
+
+    // Filterable demos
+    &.filterable-demo.cols-4 li {
+      width: 33.3333%;
+    }
+
+  }
+
+}
+
+@include media-down(phone) {
+  
+  .demos li {
+    width: 100% !important;
+  }
+
+  .demos.cols-4 li {
+    width: 50%;
+  }
+
+  .filter-demo {
+    text-align: left;
+
+    .btn {
+      margin-bottom: 4px;
+    }
+  }
+
+}

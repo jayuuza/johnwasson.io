@@ -1,0 +1,153 @@
+
+.site-header {
+  position: relative;
+  //background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  padding: 120px 0;
+  color: #fff;
+  z-index: 0;
+
+  &.overlay-white::before,
+  &.overlay-black::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+  }
+
+  &.overlay-white::before {
+    background-color: rgba(255, 255, 255, .33);
+  }
+
+  &.overlay-white.overlay-intense::before {
+    background-color: rgba(255, 255, 255, .55);
+  }
+
+  &.overlay-black::before {
+    background-color: rgba(0, 0, 0, .33);
+  }
+
+  &.overlay-black.overlay-intense::before {
+    background-color: rgba(0, 0, 0, .55);
+  }
+
+  &.bg-repeat {
+    background-size: none;
+    background-repeat: repeat;
+  }
+
+  &.bg-fixed {
+    background-attachment: fixed;
+  }
+
+  &.size-sm {
+    padding: 60px 0;
+  }
+
+  &.size-lg {
+    padding: 180px 0;
+  }
+
+  &.size-full {
+    height: 100vh;
+
+    .container,
+    .container-fluid {
+      position: relative;
+      top: 30%;
+      transform: translateY(-50%);
+    }
+  }
+
+  &.color-alt {
+    h1, h2, h3, h4, h5, h6, p {
+      color: #fff;
+    }
+  }
+
+  h1 {
+    font-weight: 200;
+    font-size: 48px;
+    line-height: 64px;
+    margin-bottom: 24px;
+    letter-spacing: 2px;
+  }
+
+  h4,
+  h3 {
+    letter-spacing: 1px;
+    line-height: 36px;
+  }
+
+  img {
+    max-width: 80%;
+  }
+
+}
+
+.transparent-nav .site-header {
+  padding-top: 220px;
+
+
+  &.size-sm {
+    padding-top: 160px;
+  }
+
+  &.size-lg {
+    padding-top: 280px;
+  }
+
+}
+
+
+@include media-down(phone) {
+
+  .site-header {
+    padding: 60px 0;
+
+    &.size-sm {
+      padding: 30px 0;
+    }
+
+    &.size-lg {
+      padding: 90px 0;
+    }
+
+    h1 {
+      font-size: 28px;
+      line-height: 40px;
+      margin-bottom: 36px;
+    }
+
+    h4,
+    h3 {
+      line-height: 28px;
+      font-size: 17px;
+    }
+
+    h5 {
+      line-height: 26px;
+      font-size: 16px;
+    }
+  }
+
+  .transparent-nav .site-header {
+    padding-top: 160px;
+
+
+    &.size-sm {
+      padding-top: 130px;
+    }
+
+    &.size-lg {
+      padding-top: 190px;
+    }
+
+  }
+
+}
