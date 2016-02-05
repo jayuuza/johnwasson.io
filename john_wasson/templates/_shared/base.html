@@ -24,9 +24,9 @@
   </head>
   <body class="sticky-nav transparent-nav">
 
-    <!-- Navigation -->
+     <!-- Navigation -->
     <nav class="navbar">
-      <div class="container">
+      <div class="container-fluid">
         <div class="logo">
           <a class="logo-default" href="index.html"><img src="{% static 'img/logo.png' %}" alt="logo"></a>
           <a class="logo-transparent" href="index.html"><img src="{% static 'img/logo-alt.png' %}" alt="logo"></a>
@@ -37,29 +37,39 @@
         <ul class="nav-menu">
           <li><a class="active" href="http://shamsoft.net/thesplash">Overview</a></li>
           <li><a href="http://shamsoft.net/thesplash/doc">Documentation</a></li>
-          <li><a href="http://themeforest.net/item/thesplash-template-landing-page/14375892/comments">Support</a></li>
-
+          <li><a href="mailto:support@shamsoft.net">Support</a></li>
+          <li>
+            <a href="#">Submenu</a>
+            <ul>
+              <li><a href="#">Link</a></li>
+              <li><a href="#">Subitem</a></li>
+              <li><a href="#">Another link</a></li>
+            </ul>
+          </li>
+          <li><a class="menu-highlighted" href="#">Buy Now</a></li>
         </ul>
       </div>
     </nav>
-    <!-- END Navigation -->
+     <!-- END Navigation -->
 
     <!-- Site header -->
-    <header class="site-header color-alt overlay-black size-full text-center" style="background-image: url(assets/img/bg-page.jpg)">
+    <header class="site-header color-alt overlay-black overlay-intense size-lg" style="background-image: url({% static 'img/bg-page.jpg' %})">
       <div class="container">
         <h1>An <strong>amazing</strong> landing page</h1>
         <h4>It helps you rapidly develop a splash/intro page for your next template.</h4>
-        <br><br><br>
-        <h6>There's a plenty of demos</h6>
-        <a class="btn btn-lg btn-white btn-outline btn-round" href="#demos"><span style="padding: 0 30px;">See the demos</span></a>
+        <br><br>
+        <a class="btn btn-lg btn-round" href="#demos">See the demos</a>
       </div>
     </header>
+    <!-- END Site header -->
+{% comment %}
     <nav>
         <ul>
             <li><a href="{% url 'home:index' %}">Home</a></li>
             <li><a href="{% url 'blog:index' %}">Blog</a></li>
         </ul>
     </nav>
+{% endcomment %}
 
     {% block body %}
     
@@ -74,20 +84,21 @@
 
           <div class="col-md-8 col-sm-6 col-xs-12">
             <ul class="footer-links">
-              <li><a href="#">About us</a></li>
+{% comment %}              <li><a href="#">About us</a></li>
               <li><a href="#">Privacy policy</a></li>
               <li><a href="#">Support</a></li>
-              <li><a href="#">Contact us</a></li>
+              <li><a href="#">Contact us</a></li>{% endcomment %}
             </ul>
           </div>
 
           <div class="col-md-4 col-sm-6 col-xs-12">
             <ul class="footer-socials">
-              <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
-              <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
-              <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
-              <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
-              <li><a class="instagram" href="#"><i class="fa fa-instagram"></i></a></li>
+              <li><a class="facebook" href="https://www.facebook.com/jonathan.wasson.37"><i class="fa fa-facebook"></i></a></li>
+              <li><a class="vimeo" href="https://careers.stackoverflow.com/users/info/643910"><i class="fa fa-stack-exchange"></i></a></li>
+              <li><a class="git" href="https://angel.co/jonathan-wasson"><i class="fa fa-angellist"></i></a></li>
+              <li><a class="rss" href="http://stackoverflow.com/users/5777470/jayuuza"><i class="fa fa-stack-overflow"></i></a></li>
+              <li><a class="linkedin" href="https://za.linkedin.com/in/jonathan-wasson-85778895"><i class="fa fa-linkedin"></i></a></li>
+              <li><a class="git" href="https://github.com/jayuuza"><i class="fa fa-github"></i></a></li>
             </ul>
           </div>
 
@@ -95,7 +106,7 @@
 
         <div class="row">
           <div class="col-md-8 col-sm-6 col-xs-12">
-            <p class="copyright-text">Copyrights &copy; 2016 All Rights Reserved by <a href="http://themeforest.net/user/shamsoft">ShaMSofT</a>.</p>
+            <p class="copyright-text">Copyrights &copy; 2016 All Rights Reserved under the <a href="http://www.dbad-license.org/">Don't Be a Dick Public License</a>.</p>
           </div>
 
           <div class="col-md-4 col-sm-6 col-xs-12">
@@ -105,5 +116,10 @@
         
       </div>
     </footer>
+
+    <script src="{% static 'js/app.min.js' %}"></script>
+
+    <script src="{% static 'js/thesplash.js' %}"></script>
 </body>
+
 </html>

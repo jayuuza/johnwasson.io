@@ -2,6 +2,103 @@
 {% load humanize %}
 
 {% block body %}
-    This is my home page.
+    <main>
+      <section id="greeting" class="no-border-bottom bg-gray-light">
+        <div class="container">
+          <header class="section-header">
+            <h2>A little about me</h2>
+            <p>I'm a 24 year old software developer from South Africa.</p>
+          </header>
 
+          <div class="row">
+            <div class="col-md-offset-2 col-md-8 col-sm-12">
+              <div class="intro-video" data-pe-videoid="nrJtHemSPW4"></div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+      <section class="no-border-bottom bg-gray-lighter">
+        <div class="container">
+          <header class="section-header">
+            <h2>Features</h2>
+            <p>Check a number of features of this template.</p>
+          </header>
+
+
+          <ul class="features icon-sided">
+            <li>
+              <div class="icon"><i class="fa fa-tv"></i></div>
+              <h5>Responsive</h5>
+              <p>Your template works on any device: desktop, tablet or mobile.</p>
+            </li>
+
+            <li>
+              <div class="icon"><i class="fa fa-wrench"></i></div>
+              <h5>Customizable</h5>
+              <p>You can easily read, edit, and write your own code, or change everything.</p>
+            </li>
+
+            <li>
+              <div class="icon"><i class="fa fa-cubes"></i></div>
+              <h5>UI Elements</h5>
+              <p>There is a bunch of useful and necessary elements for developing your template.</p>
+            </li>
+
+            <li>
+              <div class="icon"><i class="fa fa-code"></i></div>
+              <h5>Clean code</h5>
+              <p>You can find our code well organized, commented and readable.</p>
+            </li>
+
+            <li>
+              <div class="icon"><i class="fa fa-file-text-o"></i></div>
+              <h5>Documented</h5>
+              <p>As you can see, we provided a comprehensive online documentation for this template.</p>
+            </li>
+
+            <li>
+              <div class="icon"><i class="fa fa-download"></i></div>
+              <h5>Free updates</h5>
+              <p>When you purchase this template, you'll freely receive future updates.</p>
+            </li>
+          </ul>
+
+        </div>
+      </section>
+
+
+
+      <section class="section-sm no-border-bottom">
+        <div class="container">
+
+          <div class="row">
+            <div class="counter col-md-3 col-sm-6">
+              <i class="ti-user"></i>
+              <p><span data-from="0" data-to="2350">0</span>+</p>
+              <h6>Satisfied users</h6>
+            </div>
+
+            <div class="counter col-md-3 col-sm-6">
+              <i class="ti-time"></i>
+              <p><span data-from="0" data-to="1200" data-speed="2200">0</span>+</p>
+              <h6>Hours of coding</h6>
+            </div>
+
+            <div class="counter col-md-3 col-sm-6">
+              <i class="ti-panel"></i>
+              <p><span data-from="0" data-to="30" data-speed="2500">0</span>+</p>
+              <h6>Components</h6>
+            </div>
+
+            <div class="counter col-md-3 col-sm-6">
+              <i class="fa fa-code"></i>
+              <p><span data-from="0" data-to="10000" data-speed="3000">0</span>+</p>
+              <h6>Line of code</h6>
+            </div>
+          </div>
+
+        </div>
+      </section>
+    </main>
 {% endblock %}
