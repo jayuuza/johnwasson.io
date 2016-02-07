@@ -5,7 +5,8 @@ from django.shortcuts import render
 # Create your views here.
 def index(request):
     my_variables = {
-        "page_title": "TUG HOME"
+        "page_home": "active",
+        "page_title": "Jonathan Wasson | Software Developer"
     }
 
     return render(request, 'home/index.html', my_variables)

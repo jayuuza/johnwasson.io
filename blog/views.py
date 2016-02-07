@@ -5,7 +5,8 @@ from django.utils import timezone
 
 def index(request):
     my_variables = {
-        "page_title": "TUG BLOG",
+        "page_blog": "active",
+        "page_title": "Jonathan Wasson | Blog",
         "tug": timezone.now() + timedelta(days=1)
     }
 

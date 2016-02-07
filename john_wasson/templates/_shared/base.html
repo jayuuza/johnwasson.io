@@ -35,41 +35,22 @@
         <a class="navbar-toggle" href="#" data-toggle="offcanvas"><i class="fa fa-bars"></i></a>
 
         <ul class="nav-menu">
-          <li><a class="active" href="http://shamsoft.net/thesplash">Overview</a></li>
-          <li><a href="http://shamsoft.net/thesplash/doc">Documentation</a></li>
-          <li><a href="mailto:support@shamsoft.net">Support</a></li>
           <li>
-            <a href="#">Submenu</a>
+            <a class="{{ page_home }}" href="#">About me</a>
             <ul>
-              <li><a href="#">Link</a></li>
-              <li><a href="#">Subitem</a></li>
-              <li><a href="#">Another link</a></li>
+              <li><a href="#greeting">Overview</a></li>
+              <li><a href="#">Interests</a></li>
+              <li><a href="#">Projects</a></li>
             </ul>
           </li>
-          <li><a class="menu-highlighted" href="#">Buy Now</a></li>
+
+          <li><a class="{{ page_blog }} "href="/blog">Blog</a></li>
+
         </ul>
       </div>
     </nav>
      <!-- END Navigation -->
 
-    <!-- Site header -->
-    <header class="site-header color-alt overlay-black overlay-intense size-lg" style="background-image: url({% static 'img/bg-page.jpg' %})">
-      <div class="container">
-        <h1>An <strong>amazing</strong> landing page</h1>
-        <h4>It helps you rapidly develop a splash/intro page for your next template.</h4>
-        <br><br>
-        <a class="btn btn-lg btn-round" href="#demos">See the demos</a>
-      </div>
-    </header>
-    <!-- END Site header -->
-{% comment %}
-    <nav>
-        <ul>
-            <li><a href="{% url 'home:index' %}">Home</a></li>
-            <li><a href="{% url 'blog:index' %}">Blog</a></li>
-        </ul>
-    </nav>
-{% endcomment %}
 
     {% block body %}
     

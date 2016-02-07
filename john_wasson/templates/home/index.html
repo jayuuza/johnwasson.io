@@ -1,73 +1,141 @@
 {% extends '_shared/base.html' %}
 {% load humanize %}
+{% load staticfiles %}
 
 {% block body %}
+    <header class="site-header color-alt overlay-black overlay-intense size-full" style="background-image: url({% static 'img/new-york-skyline.jpg' %})">
+      <div class="container">
+        <h1>Hi, I'm <strong>Jonathan Wasson.</strong></h1>
+        <h4>Full Stack Developer</h4>
+        <br><br>
+{% comment %}
+        <a class="btn btn-lg btn-round" href="#greeting">More about me <i style="font-size: x-large" class="fa fa-angle-down"></i></a>
+{% endcomment %}
+      </div>
+    </header>
+
     <main>
-      <section id="greeting" class="no-border-bottom bg-gray-light">
+      <section id="greeting" class="bg-gray">
         <div class="container">
           <header class="section-header">
-            <h2>A little about me</h2>
-            <p>I'm a 24 year old software developer from South Africa.</p>
+
+            <h2>Who I am</h2>
+{% comment %}
+            <img class="img-circle" src="{% static 'img/me.jpg' %}" alt="image" style="max-width:290px;">
+{% endcomment %}
+            <p>I'm a software developer from South Africa. I'm an avid botanist and gamer with an appetite for travel.</p>
           </header>
 
-          <div class="row">
-            <div class="col-md-offset-2 col-md-8 col-sm-12">
-              <div class="intro-video" data-pe-videoid="nrJtHemSPW4"></div>
-            </div>
-          </div>
 
         </div>
       </section>
       <section class="no-border-bottom bg-gray-lighter">
         <div class="container">
           <header class="section-header">
-            <h2>Features</h2>
-            <p>Check a number of features of this template.</p>
+            <h2>What I do</h2>
+            <p></p>
           </header>
 
+          <ul class="features">
+              <div class="row">
+                <li>
+                  <div class="icon"><i class="fa fa-code"></i></div>
+                  <h5>Development</h5>
+                  <p>
+                      I build websites, both in my free-time and as a career. I have experience with <mark>MySQL</mark> and <mark>MongoDB</mark> in the database layer. <mark>Python, Java</mark>
+                      and <mark>most .Net languages</mark> in the backend. For deployment I've used <mark>Jenkins</mark> and <mark>Octopus</mark>. And finally <mark>Html, CSS, Javascript, jQuery</mark> and <mark>Sass</mark> in the frontend. I'm also familiar with languages such as Matlab and Mathematica.
+                  </p>
+                </li>
 
-          <ul class="features icon-sided">
-            <li>
-              <div class="icon"><i class="fa fa-tv"></i></div>
-              <h5>Responsive</h5>
-              <p>Your template works on any device: desktop, tablet or mobile.</p>
-            </li>
+                <li>
+                  <div class="icon"><i class="fa fa-cogs"></i></div>
+                  <h5>Machine Learning</h5>
+                  <p>
+                    Machine learning for me is truly fascinating and is one of my greatest interests. Where I can in my coding, I always try come up with novel solutions when possible involving machine learning.
+                  </p>
+                </li>
 
-            <li>
-              <div class="icon"><i class="fa fa-wrench"></i></div>
-              <h5>Customizable</h5>
-              <p>You can easily read, edit, and write your own code, or change everything.</p>
-            </li>
+                <li>
+                  <div class="icon"><i class="ti-ink-pen"></i></div>
+                  <h5>Good Design</h5>
+                  <p>Everything I make has to look good. If my code is messy or produces something that doesn't look good, then I won't be satisfied. I try incorporate good design principles in everything I do while attempting to follow best practice as best I can.</p>
+                </li>
+            </div>
+            <div class="row">
+                <li>
+                  <div class="icon"><i class="ti-game"></i></div>
+                  <h5>Gaming</h5>
+                  <p>When I'm not coding or outside, I'm playing games. I've played more games than I care to admit. They're not limited to your average video games, I regularly play board games like Catan with friends.</p>
+                </li>
 
-            <li>
-              <div class="icon"><i class="fa fa-cubes"></i></div>
-              <h5>UI Elements</h5>
-              <p>There is a bunch of useful and necessary elements for developing your template.</p>
-            </li>
+                <li>
+                  <div class="icon"><i class="fa fa-leaf"></i></div>
+                  <h5>Horticulture</h5>
+                  <p>I love all nature and the outdoors. I started growing and collecting bonsais when I was 12 years old. In the interim, my bonsai collection has grown very large (50 strong currently). To the point where my garden can't hold anymore.</p>
+                </li>
 
-            <li>
-              <div class="icon"><i class="fa fa-code"></i></div>
-              <h5>Clean code</h5>
-              <p>You can find our code well organized, commented and readable.</p>
-            </li>
-
-            <li>
-              <div class="icon"><i class="fa fa-file-text-o"></i></div>
-              <h5>Documented</h5>
-              <p>As you can see, we provided a comprehensive online documentation for this template.</p>
-            </li>
-
-            <li>
-              <div class="icon"><i class="fa fa-download"></i></div>
-              <h5>Free updates</h5>
-              <p>When you purchase this template, you'll freely receive future updates.</p>
-            </li>
+                <li>
+                  <div class="icon"><i class="fa fa-plane"></i></div>
+                  <h5>Travel</h5>
+                  <p>I have a literal bucket list of places I'd like to visit. The list is still quite long but hopefully each year I'll be able to cross out a few locations.</p>
+                </li>
+            </div>
           </ul>
 
         </div>
       </section>
 
 
+      <section id="demos" class="no-border-bottom bg-gray">
+        <div class="container">
+          <header class="section-header">
+            <h2>Notable <strong>projects</strong></h2>
+            <p></p>
+          </header>
+
+          <div class="filter-demo">
+            <button class="btn active">All</button>
+<!--             <button class="btn" data-group="blog">Blog</button>-->
+            <button class="btn" data-group="websites">Websites</button>
+            <button class="btn" data-group="compsci">Computer Science</button>
+<!--             <button class="btn" data-group="shop">Shop</button> -->
+          </div>
+
+          <br><br>
+
+          <ul class="demos filterable-demo">
+            <li data-groups="websites">
+              <a href="#" target="_blank">
+                <span class="img-scroll" style="background-image: url({% static 'img/makro-preview.png' %})"></span>
+              </a>
+              <h4 class="text-center">Makro</h4>
+              <p>Makro is one of South Africa's largest e-commerce websites. The site handles thousands of daily orders and millions in profit every month. I've work on the entirety of the site, from the database layer all the way through to the jQuery and css.</p>
+            </li>
+
+            <li data-groups="websites">
+              <a href="#" target="_blank">
+                <span class="img-scroll" style="background-image: url({% static 'img/makro-preview.png' %})"></span>
+              </a>
+              <h4 class="text-center">Makro Connect</h4>
+              <p>Since Makro needs to handle such a large number of orders daily, they make us of a very large call centre. Makro Connect is an administrative website I've made to provide tools to these call centre staff which allows them to view orders, customers, payments etc.
+
+              </p>
+            </li>
+
+            <li data-groups="compsci">
+              <a href="#" target="_blank">
+                <span class="img-scroll" style="background-image: url({% static 'img/makro-preview.png' %})"></span>
+              </a>
+              <h4 class="text-center">Content Adaptation</h4>
+              <p>
+
+              </p>
+            </li>
+          </ul>
+
+
+        </div>
+      </section>
 
       <section class="section-sm no-border-bottom">
         <div class="container">
