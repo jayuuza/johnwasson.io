@@ -18,18 +18,15 @@
       <section id="greeting" class="bg-gray">
         <div class="container">
           <header class="section-header">
-
+            <img class="img-circle" src="{{ gravatar_url }}" alt="image" style="max-width:290px;">
             <h2>Who I am</h2>
-{% comment %}
-            <img class="img-circle" src="{% static 'img/me.jpg' %}" alt="image" style="max-width:290px;">
-{% endcomment %}
-            <p>I'm a software developer from South Africa. I'm an avid botanist and gamer with an appetite for travel.</p>
+            <p>I'm a software developer from South Africa. I'm an avid botanist and gamer with an appetite for travel. My main programming interests involve web development and machine learning.</p>
           </header>
 
 
         </div>
       </section>
-      <section class="no-border-bottom bg-gray-lighter">
+      <section id="aboutme" class="no-border-bottom bg-gray-lighter">
         <div class="container">
           <header class="section-header">
             <h2>What I do</h2>
@@ -51,7 +48,7 @@
                   <div class="icon"><i class="fa fa-cogs"></i></div>
                   <h5>Machine Learning</h5>
                   <p>
-                    Machine learning for me is truly fascinating and is one of my greatest interests. Where I can in my coding, I always try come up with novel solutions when possible involving machine learning.
+                    Machine learning for me is truly fascinating and is one of my greatest interests. Where I can in my coding, I will always try incorporate some machine learning. AAt the very least I'll research novel solution involving machine learning.
                   </p>
                 </li>
 
@@ -114,21 +111,21 @@
 
             <li data-groups="websites">
               <a href="#" target="_blank">
-                <span class="img-scroll" style="background-image: url({% static 'img/makro-preview.png' %})"></span>
+                <span class="img-scroll" style="background-image: url({% static 'img/metronic.png' %})"></span>
               </a>
               <h4 class="text-center">Makro Connect</h4>
-              <p>Since Makro needs to handle such a large number of orders daily, they make us of a very large call centre. Makro Connect is an administrative website I've made to provide tools to these call centre staff which allows them to view orders, customers, payments etc.
-
+              <p>
+                  Since Makro needs to handle such a large number of orders daily, they make us of a very large call centre. Makro Connect is an administrative website I've made to provide tools to these call centre staff which allows them to view orders, customers, payments etc.
               </p>
             </li>
 
             <li data-groups="compsci">
               <a href="#" target="_blank">
-                <span class="img-scroll" style="background-image: url({% static 'img/makro-preview.png' %})"></span>
+                <span class="img-scroll" style="background-image: url({% static 'img/content.png' %})"></span>
               </a>
               <h4 class="text-center">Content Adaptation</h4>
               <p>
-
+                As my Computer Science honours project, I researched ways to provide dynamic content to users based off data gathered on them. For my paper I discussed a method to infer the type of user in a game of Tetris. This was done by observing their actions and modelling the user using a Markov Decision Process.
               </p>
             </li>
           </ul>
@@ -137,7 +134,7 @@
         </div>
       </section>
 
-      <section class="section-sm no-border-bottom">
+{% comment %}      <section class="section-sm no-border-bottom">
         <div class="container">
 
           <div class="row">
@@ -167,6 +164,6 @@
           </div>
 
         </div>
-      </section>
+      </section>{% endcomment %}
     </main>
 {% endblock %}

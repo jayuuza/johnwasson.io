@@ -27,10 +27,10 @@
      <!-- Navigation -->
     <nav class="navbar">
       <div class="container-fluid">
-        <div class="logo">
+{% comment %}        <div class="logo">
           <a class="logo-default" href="index.html"><img src="{% static 'img/logo.png' %}" alt="logo"></a>
           <a class="logo-transparent" href="index.html"><img src="{% static 'img/logo-alt.png' %}" alt="logo"></a>
-        </div>
+        </div>{% endcomment %}
 
         <a class="navbar-toggle" href="#" data-toggle="offcanvas"><i class="fa fa-bars"></i></a>
 
@@ -39,12 +39,15 @@
             <a class="{{ page_home }}" href="#">About me</a>
             <ul>
               <li><a href="#greeting">Overview</a></li>
-              <li><a href="#">Interests</a></li>
-              <li><a href="#">Projects</a></li>
+              <li><a href="#aboutme">Interests</a></li>
+              <li><a href="#demos">Projects</a></li>
+              <li><a href="#contact">Contact me</a></li>
             </ul>
           </li>
 
+{% comment %}
           <li><a class="{{ page_blog }} "href="/blog">Blog</a></li>
+{% endcomment %}
 
         </ul>
       </div>
