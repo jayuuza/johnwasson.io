@@ -19,3 +19,6 @@ def index(request):
     }
 
     return render(request, 'home/index.html', my_variables)
+
+def health(request):
+    return HttpResponse("OK")
