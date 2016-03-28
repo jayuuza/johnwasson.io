@@ -24,7 +24,7 @@ def view_project(request, slug):
         "page_title": "Jonathan Wasson | Projects",
         "nav_type": "",
         "project": project,
-        "content_blocks": ContentBlock.objects.filter(project=project),
+        "content_blocks": ContentBlock.objects.filter(parent=project),
     }
 
-    return render('my_projects/view_project.html', my_variables)
+    return render(request, 'my_projects/view_project.html', my_variables)

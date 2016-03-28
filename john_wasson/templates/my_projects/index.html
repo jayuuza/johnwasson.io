@@ -32,8 +32,8 @@
                 {% for project in projects %}
                     {% if project.enabled == True %}
                         <li data-groups="{{ project.type.title }}">
-                          <a href="{{ project.get_absolute_url }}" target="_blank">
-                            <span class="img-scroll" style="background-image: url({% static project.image %})"></span>
+                          <a href="{% url 'my_projects:detail' project.slug %}" target="_blank">
+                            <span class="img-scroll" style="background-image:{% url project.image.url %}"></span>
                           </a>
                           <h4 class="text-center">{{ project.title }}</h4>
                           <p>{{ project.body }}</p>

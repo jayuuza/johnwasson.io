@@ -13,7 +13,7 @@ class ProjectType(models.Model):
 class Project(models.Model):
     title = models.CharField(max_length=100, unique=True)
     body = models.TextField()
-    image = models.ImageField(upload_to='john_wasson/static')
+    image = models.ImageField(upload_to='my_projects')
     type = models.ForeignKey(ProjectType)
 
     slug = models.SlugField(max_length=100, unique=True)
@@ -22,14 +22,10 @@ class Project(models.Model):
     def __unicode__(self):
         return '%s' % self.title
 
-    @permalink
-    def get_absolute_url(self):
-        return ('view_project_details', None, { 'slug': self.slug })
-
 class ContentBlock(models.Model):
     title = models.CharField(max_length=100, unique=True)
     body = models.TextField()
-    image = models.ImageField(upload_to='john_wasson/static')
+    image = models.ImageField(upload_to='my_projects')
     parent = models.ForeignKey(Project)
 
     def __unicode__(self):
