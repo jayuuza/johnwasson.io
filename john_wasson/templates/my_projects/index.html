@@ -1,0 +1,52 @@
+{% extends '_shared/base.html' %}
+{% load humanize %}
+{% load staticfiles %}
+
+{% block body %}
+
+    <main>
+
+      <section id="demos" class="no-border-bottom bg-gray">
+        <div class="container">
+          <header class="section-header">
+            <h2>Notable <strong>projects</strong></h2>
+            <p></p>
+          </header>
+
+          <div class="filter-demo">
+            <button class="btn active">All</button>
+            {% if projects %}
+                {% for type in types %}
+                    <button class="btn" data-group="{{ type.title }}">{{ type.title }}</button>
+                {% endfor %}
+            {% endif %}
+{#            <button class="btn" data-group="websites">Websites</button>#}
+{#            <button class="btn" data-group="compsci">Computer Science</button>#}
+          </div>
+
+          <br><br>
+
+          <ul class="demos filterable-demo">
+
+            {% if projects %}
+                {% for project in projects %}
+                    {% if project.enabled == True %}
+                        <li data-groups="{{ project.type.title }}">
+                          <a href="{{ project.get_absolute_url }}" target="_blank">
+                            <span class="img-scroll" style="background-image: url({% static project.image %})"></span>
+                          </a>
+                          <h4 class="text-center">{{ project.title }}</h4>
+                          <p>{{ project.body }}</p>
+                        </li>
+                    {% endif %}
+                {% endfor %}
+            {% endif %}
+
+          </ul>
+
+        </div>
+      </section>
+
+    </main>
+
+{% endblock %}

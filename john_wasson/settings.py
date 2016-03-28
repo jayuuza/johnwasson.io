@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/1.9/ref/settings/
 """
 
 import os
-
+import django
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -20,14 +20,14 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/1.9/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ['DJANGO_SECRET']
-
 # SECURITY WARNING: don't run with debug turned on in production!
-debug_environ = os.environ['DEBUG']
+debug_environ = os.getenv('DEBUG', True)
 if debug_environ == "True":
     DEBUG = True
+    SECRET_KEY = "blah"
 else:
     DEBUG = False
+    SECRET_KEY = os.getenv('DJANGO_SECRET', "blah")
 
 ALLOWED_HOSTS = ['*']
 
@@ -43,7 +43,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django.contrib.humanize',
     'home',
-    'blog'
+    'blog',
+    'my_projects'
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -80,7 +81,6 @@ WSGI_APPLICATION = 'john_wasson.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/1.9/ref/settings/#databases
-
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',

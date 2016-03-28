@@ -13,7 +13,7 @@
     <!-- Styles -->
     <link href="{% static 'css/app.min.css' %}" rel="stylesheet">
     <link href="{% static 'css/thesplash.css' %}" rel="stylesheet">
-    <link href="{% static 'css/skin-red.css' %}" rel="stylesheet">
+    <link href="{% static 'css/skin-teal.css' %}" rel="stylesheet">
 
     <!-- Fonts -->
     <link href='http://fonts.googleapis.com/css?family=Raleway:300,400,500,600,800%7COpen+Sans:300,400,500,600,700,800%7CMontserrat:400,700' rel='stylesheet' type='text/css'>
@@ -22,14 +22,14 @@
     <link href="{% static 'img/favicon.ico' %}" rel="stylesheet">
 
   </head>
-  <body class="sticky-nav transparent-nav">
+  <body class="sticky-nav {{ nav_type }}">
 
      <!-- Navigation -->
     <nav class="navbar">
       <div class="container-fluid">
         <div class="logo">
           <a class="logo-default" href="/"><img src="{% static 'img/logo.png' %}" alt="logo"></a>
-          <a class="logo-transparent" href="/"><img src="{% static 'img/logo.png' %}" alt="logo"></a>
+          <a style="{{ nav_logo_display }}" class="logo-transparent" href="/"><img src="{% static 'img/logo.png' %}" alt="logo"></a>
         </div>
 
         <a class="navbar-toggle" href="#" data-toggle="offcanvas"><i class="fa fa-bars"></i></a>
@@ -43,6 +43,11 @@
               <li><a href="#demos">Projects</a></li>
               <li><a href="#contact">Contact me</a></li>
             </ul>
+          </li>
+          <li>
+            <a ></a>
+{#            <a class="{{ page_project }}" href="/projects">Projects</a>#}
+
           </li>
 
 {% comment %}
@@ -78,9 +83,9 @@
           <div class="col-md-4 col-sm-6 col-xs-12">
             <ul class="footer-socials">
               <li><a class="facebook" href="https://www.facebook.com/jonathan.wasson.37"><i class="fa fa-facebook"></i></a></li>
-              <li><a class="vimeo" href="https://careers.stackoverflow.com/users/info/643910"><i class="fa fa-stack-exchange"></i></a></li>
+              <li><a class="rss" href="https://careers.stackoverflow.com/users/info/643910"><i class="fa fa-stack-exchange"></i></a></li>
               <li><a class="git" href="https://angel.co/jonathan-wasson"><i class="fa fa-angellist"></i></a></li>
-              <li><a class="rss" href="http://stackoverflow.com/users/5777470/jayuuza"><i class="fa fa-stack-overflow"></i></a></li>
+{#              <li><a class="rss" href="http://stackoverflow.com/users/5777470/jayuuza"><i class="fa fa-stack-overflow"></i></a></li>#}
               <li><a class="linkedin" href="https://za.linkedin.com/in/jonathan-wasson-85778895"><i class="fa fa-linkedin"></i></a></li>
               <li><a class="git" href="https://github.com/jayuuza"><i class="fa fa-github"></i></a></li>
             </ul>
